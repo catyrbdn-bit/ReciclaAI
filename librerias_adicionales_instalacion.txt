@@ -1,0 +1,51 @@
+ReciclaAI - Librerias y datos utilizados
+
+ENTRENAMIENTO
+
+El proyecto utiliza imagenes propias organizadas en 3 carpetas:
+
+  TRAIN/
+    R/  -> Imagenes de objetos reciclables (botellas, latas, cartón, vidrio)
+    N/  -> Imagenes de objetos no reciclables (unicel, bolsas, cubrebocas)
+
+  VALIDATION/
+    R/  -> Imagenes de validación reciclables
+    N/  -> Imagenes de validación no reciclables
+
+  TEST/
+    R/  -> Imagenes de prueba reciclables
+    N/  -> Imagenes de prueba no reciclables
+
+Total aproximado: 163 imagenes de entrenamiento
+
+
+LIBRERIAS UTILIZADAS EN CLASE
+------------------------------
+- TensorFlow / Keras
+- NumPy
+- OpenCV (cv2)
+
+
+LIBRERIAS ADICIONALES (no vistas en clase)
+-------------------------------------------
+
+1. MobileNetV2 (incluida en TensorFlow/Keras)
+   - No requiere instalación extra, viene con TensorFlow
+   - Se importa con:
+     from tensorflow.keras.applications import MobileNetV2
+
+2. EarlyStopping (incluida en TensorFlow/Keras)
+   - No requiere instalación extra, viene con TensorFlow
+   - Se importa con:
+     from tensorflow.keras.callbacks import EarlyStopping
+
+3. GlobalAveragePooling2D (incluida en TensorFlow/Keras)
+   - No requiere instalación extra, viene con TensorFlow
+   - Se importa con:
+     from tensorflow.keras.layers import GlobalAveragePooling2D
+   - Reemplaza a Flatten, resume la información de MobileNetV2
+     en un vector sin perder características importantes
+
+---------------------------------------------------------
+no olvide correr: 
+pip install -r requerimientos.txt
